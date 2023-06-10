@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * squar_check -> solve for natural square root.
+ * square_check -> solve for natural square root.
  * @i: first integer.
  * @c: second integer.
  *
@@ -21,7 +21,8 @@ int square_check(int i, int c)
  * _sqrt_recursion -> returns the natural square root of a number.
  * @n: numbers to be squared.
  *
- * Return: the natural numbers. If n does not have a natural square root, returns -1.
+ * Return: the natural numbers. If n does not have
+ * a natural square root, returns -1.
  */
 int _sqrt_recursion(int n)
 {
