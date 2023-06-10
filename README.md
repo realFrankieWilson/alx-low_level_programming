@@ -60,4 +60,11 @@ A low-level programming language is a programming language that provides little 
 * c-Pointer to Pointer
 * C-Pointer to Pointer with examples
 * C-Multi-dimensional Arrays in C
-* Two-Dimensional (2D) arrays in C programming language
+* Two-Dimensional (2D) arrays in C programming languauge
+
+## 0x08.c - Recursion
+* Recursion, introduction
+* what recursion is
+* How Recursion are implemented
+* situation to use recursion
+* what situation recursion should'nt be used
