@@ -8,10 +8,8 @@
  */
 int main(int argc, char __attribute__((__unused__)) **argv)
 {
-	int sum = 0;
 
-	sum += argc;
-	printf("%d\n", sum);
+	printf("%d\n", --argc);
 
 	return (0);
 }

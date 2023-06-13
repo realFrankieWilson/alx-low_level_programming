@@ -1,15 +1,27 @@
 #include "main.h"
+/**
+ * main -> A program that multiplies two numbers.
+ * @argc: agument count.
+ * @argv: argument vector(arrays).
+ *
+ * Return: 0 on Success and -1 if otherwise.
+ */
 
 int main(int argc, char **argv)
 {
-	char sum, s;
-	if (argc == 2)
+	int mull = 0, arg1 = 0, arg2 = 0;
+
+	if (--argc != 2)
 	{
-		char first = (*(argv + 1));
-		char sec = (*(argv + 2));
-		sum = first * sec;
-		s = atoi(sum);
-		printf("%d\n", s);
+		fprintf(stderr, "Error\n");
+		exit(-1);
+	}
 	else
-		printf("Error\n");		
+	{
+		arg1 = atoi(*(argv + 1));
+		arg2 = atoi(*(argv + 2));
+		mull = arg1 * arg2;
+		printf("%d\n", mull);
+	}
+	return (0);
 }
