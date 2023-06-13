@@ -68,3 +68,10 @@ A low-level programming language is a programming language that provides little 
 * How Recursion are implemented
 * situation to use recursion
 * what situation recursion should'nt be used
+
+## 0x0A.c - argc, argv
+* Arguments to main
+* argc and argv
+* What argc and argv means
+* how to compile with unused variables
+
