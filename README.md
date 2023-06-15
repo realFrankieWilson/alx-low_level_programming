@@ -75,3 +75,7 @@ A low-level programming language is a programming language that provides little 
 * What argc and argv means
 * how to compile with unused variables
 
+## 0x0B.c - mallock, free.
+* Malloc
+* Free
+* Dynamic Memory Allocation
