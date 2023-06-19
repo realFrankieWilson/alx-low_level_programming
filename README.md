@@ -79,3 +79,9 @@ A low-level programming language is a programming language that provides little 
 * Malloc
 * Free
 * Dynamic Memory Allocation
+
+## 0x0C. c - More malloc, free.
+Automatic and dynamic allocation, malloc and free.
+* exit (3)
+* calloc
+* realloc
