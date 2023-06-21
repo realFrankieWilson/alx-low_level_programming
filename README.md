@@ -85,3 +85,9 @@ Automatic and dynamic allocation, malloc and free.
 * exit (3)
 * calloc
 * realloc
+
+## 0x0D. c - Preprocessor
+* Macros and their usage.
+* Most common predefined macros
+* How to include guard your header files.
+
