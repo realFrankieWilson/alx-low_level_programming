@@ -25,4 +25,7 @@
 #### 3. Function-like macro
 * A function like macro ABS(x) that computes the absolute value of a number x.
 
+#### 4. SUM
+* A function-like SUM(x, y) that computes the sum of the number x and y.
+
 
