@@ -91,3 +91,10 @@ Automatic and dynamic allocation, malloc and free.
 * Most common predefined macros
 * How to include guard your header files.
 
+## 0X0E.C - Structures, typedef
+* structures, when, why and how to use them.
+* how to use typedef
+
+
+
+
