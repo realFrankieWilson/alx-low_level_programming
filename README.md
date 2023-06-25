@@ -95,6 +95,8 @@ Automatic and dynamic allocation, malloc and free.
 * structures, when, why and how to use them.
 * how to use typedef
 
-
-
+## 0x0F - Function pointers
+* Function pointers and how to use them
+* What function pointer holds
+* Where does a function pointer point to in the virtual memory
 
