@@ -100,3 +100,8 @@ Automatic and dynamic allocation, malloc and free.
 * What function pointer holds
 * Where does a function pointer point to in the virtual memory
 
+## 0x010. C - Variadic functions
+* What are variadic functions
+* How to use va_start, va_arg and va_end macros
+* Why and how to use the const type qualifier.
+
