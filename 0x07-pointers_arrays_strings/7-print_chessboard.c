@@ -1,10 +1,12 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_chessboard -> prints the chessboard.
- * @a: array pointer
+ * print_chessboard -  a function that prints the chessboard.
  *
- * Return: Nothing
+ * @a: The character to be printed
+ *
+ * Return: Always return 0 (success).
  */
 void print_chessboard(char (*a)[8])
 {
@@ -17,5 +19,7 @@ void print_chessboard(char (*a)[8])
 			_putchar(a[i][j]);
 		}
 		_putchar('\n');
+
 	}
+
 }
