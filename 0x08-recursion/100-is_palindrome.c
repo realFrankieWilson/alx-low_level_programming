@@ -1,50 +1,62 @@
 #include "main.h"
 
-int check_pal(char *s, int i, int len);
-int _strlen_recursion(char *s);
+int find_strlen(char *s);
+int check_palindrome(char *s, int len, int index);
+int is_palindrome(char *s);
 
 /**
- * is_palindrome -> return a palindrome string.
- * @s: string to be returned.
+ * find_strlen - Returns the length of a string.
+ * @s: The string to be measured.
  *
- * Return: 1 if s is not empty and 0 if it is.
+ * Return: The length of the string.
+ */
+int find_strlen(char *s)
+{
+	int len = 0;
+
+	if (*(s + len))
+	{
+		len++;
+		len += find_strlen(s + len);
+	}
+
+	return (len);
+}
+
+/**
+ * check_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ * @len: The length of s.
+ * @index: The index of the string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
+ */
+int check_palindrome(char *s, int len, int index)
+{
+	if (s[index] == s[len / 2])
+		return (1);
+
+	if (s[index] == s[len - index - 1])
+		return (check_palindrome(s, len, index + 1));
+
+	return (0);
+}
+
+/**
+ * is_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
  */
 int is_palindrome(char *s)
 {
-	if (s == '\0')
-		return (0);
-	else
-		return (*s + 1);
-}
+	int index = 0;
+	int len = find_strlen(s);
 
-/**
- * _strlen_recursion -> returns the length
- * @s: string to calculate the length of
- *
- * Return: length of the string.
- */
-
-int _strlen_recursion(char *s)
-{
-	if (*s == '\0')
-		return (0);
-	return (1 + _strlen_recursion(s + 1));
-}
-
-/**
- * check_pal -> checks the character recursive
- * @s: string to check
- * @len: length of the string
- * @i: iterator
- *
- * Return: 1 if true, otherwise 0.
- */
-
-int check_pal(char *s, int i, int len)
-{
-	if (*(s + 1) != *(s + len) - 1)
-		return (0);
-	if (i >= len)
+	if (!(*s))
 		return (1);
-	return (check_pal(s, i + 1, len - 1));
+
+	return (check_palindrome(s, len, index));
 }
