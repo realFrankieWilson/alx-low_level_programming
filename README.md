@@ -105,3 +105,7 @@ Automatic and dynamic allocation, malloc and free.
 * How to use va_start, va_arg and va_end macros
 * Why and how to use the const type qualifier.
 
+## 0x12. C - Singly linked lists
+* Data Structures
+* Linked Lists
+
