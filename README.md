@@ -112,3 +112,6 @@ Automatic and dynamic allocation, malloc and free.
 ## 0x13. C - More Singly linked lists
 * How to use linked lists
 
+## 014. C- Bit manipulation
+* Bit manipulation and bitwise operators.
+
