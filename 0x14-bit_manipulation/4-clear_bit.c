@@ -3,7 +3,9 @@
 /**
  * clear_bit -> Sets the value of a bit at a given index.
  * @n: The value to be returned.
- * @index: index starting from 0 of the bit.
+ * @index: index starting from 0 of the bit
+ *
+ * Return: Nothing
  */
 
 int clear_bit(unsigned long int *n, unsigned int index)
