@@ -115,3 +115,8 @@ Automatic and dynamic allocation, malloc and free.
 ## 014. C- Bit manipulation
 * Bit manipulation and bitwise operators.
 
+## 0x15. C- File I/O
+* open
+* close
+* write
+* dprintf
