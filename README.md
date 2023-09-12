@@ -120,3 +120,6 @@ Automatic and dynamic allocation, malloc and free.
 * close
 * write
 * dprintf
+
+## 0x1A. C - Hash Tables
+
