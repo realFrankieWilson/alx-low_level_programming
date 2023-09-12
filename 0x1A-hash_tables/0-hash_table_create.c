@@ -10,12 +10,31 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *table = malloc(sizeof(hash_table_t));
+	/** variable declarations **/
+	hash_table_t *new_t;
+	unsigned int index;
 
-	if (table == NULL)
+	/** check for empty size **/
+	if (size == 0)
 		return (NULL);
-	table->size = size;
-	table->array = calloc(table->size, sizeof(hash_node_t));
-	/*free(table);*/
-	return (table);
+
+	/** allocate memory And array**/
+	new_t = malloc(sizeof(hash_table_t));
+
+	/** check for memory allocation error **/
+	if (new_t == NULL)
+		return (NULL);
+
+	/** allocate size **/
+	new_t->size = size;
+	new_t->array = malloc(sizeof(hash_table_t *) * size);
+	/** checks for empty table array **/
+	if (new_t->array  == 0)
+		return (NULL);
+
+	/** initializes all array at index to NULL **/
+	for (index = 0; index < size; index++)
+		new_t->array[index] = NULL;
+
+	return (new_t);
 }
