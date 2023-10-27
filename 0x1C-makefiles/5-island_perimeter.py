@@ -3,15 +3,17 @@
 
 def island_perimeter(grid):
     """This function finds the island perimeter"""
-    update = 0
+    ln0 = len(grid[0])
     ln = len(grid)
+    update0 = 0
+    update1 = 0
 
     for i in range(ln):
-        for j in range(len(grid[i])):
+        for j in range(len(ln0):
             if grid[i][j] == 1:
-                update += 4
-                if j > 0 and grid[i][j-1]:
-                    update -= 2
-                if i > 0 and grid[i-1][j]:
-                    update -= 2
-    return update
+                update0 += 1
+                if (j > 0 and grid[i][j-1] == 1):
+                    update1 += 1
+                if (i > 0 and grid[i-1][j] == 1):
+                    update1 += 1
+    return update0 * 4 - update1 * 2
