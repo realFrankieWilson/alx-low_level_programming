@@ -1,19 +1,32 @@
 #!/usr/bin/python3
-# 5-island_perimeter.py
+""" A function hat returns the perimeter of the island described in grid"""
+
 
 def island_perimeter(grid):
-    """This function finds the island perimeter"""
-    ln0 = len(grid[0])
-    ln = len(grid)
-    update0 = 0
-    update1 = 0
+    """
+    grid is a list of list of integers:
+    0 represents a water zone
+    1 represents a land zone
+    One cell is a square with side length 1
+    Grid cells are connected horizontally/vertically (not diagonally).
+    Grid is rectangular, width and height don’t exceed 100
+    Grid is completely surrounded by water, and there
+    is one island (or nothing).
+    The island doesn’t have “lakes” (water inside that
+    isn’t connected to the water around the island).
 
-    for i in range(ln):
-        for j in range(len(ln0):
+    """
+    width = len(grid[0])
+    height = len(grid)
+    edges = 0
+    size = 0
+
+    for i in range(height):
+        for j in range(width):
             if grid[i][j] == 1:
-                update0 += 1
-                if (j > 0 and grid[i][j-1] == 1):
-                    update1 += 1
-                if (i > 0 and grid[i-1][j] == 1):
-                    update1 += 1
-    return update0 * 4 - update1 * 2
+                size += 1
+                if (j > 0 and grid[i][j - 1] == 1):
+                    edges += 1
+                if (i > 0 and grid[i - 1][j] == 1):
+                    edges += 1
+    return size * 4 - edges * 2
