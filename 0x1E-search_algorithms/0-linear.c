@@ -22,12 +22,11 @@ int linear_search(int *array, size_t size, int value)
 
 	if (array)
 
-		while (i != size - 1)
+		for (; i < size; i++)
 		{
 			printf("Value checked array[%d] = [%d]\n", i, array[i]);
 			if (array[i] == value)
 				return (value);
-			i++;
 		}
 	return (-1);
 }
