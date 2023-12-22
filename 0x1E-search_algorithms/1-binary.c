@@ -1,5 +1,4 @@
 #include "search_algos.h"
-int get_middle(int *array, int left, int right, size_t size, int value);
 
 /**
  * binary_search -> A function that searches for a value in a sorted array
@@ -19,52 +18,21 @@ int get_middle(int *array, int left, int right, size_t size, int value);
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int max;
-
-	if (array == NULL)
-		return (-1);
-	max = size - 1;
-	return (get_middle(array, 0, max, size, value));
-}
-
-
-/**
- * get_middle -> Gets the middle element of an array.
- *
- * @array: The array to derive the middle element from
- * @left: The starting point of the array.
- * @right: The end point of the array.
- * @size: The size of the array.
- * @value: The value we are looking for.
- *
- * Return: value on success, otherwise -1 is returned.
- */
-
-int get_middle(int *array, int left, int right, size_t size, int value)
-{
-	int m, j = 0;
-
-	left = 0, right = size - 1;
+	size_t left = 0, right = size - 1, m, i = 0;
 
 	if (array != NULL)
 		while (left <= right)
 		{
 			m = (left + right) / 2;
 			printf("Searching in array: ");
-			for (j = left; j <= right; j++)
-			{
-				if (j == right)
-					printf("%d", array[j]);
-				else
-					printf("%d", array[j]);
-			}
-
-			printf("\n");
-			if (value < array[m])
-				right = m - 1;
-			else if (value > array[m])
+			for (i = left; i < right; i++)
+				printf("%d, ", array[i]);
+			printf("%d\n", array[i]);
+			if (array[m] < value)
 				left = m + 1;
-			else if (value == array[m])
+			else if (array[m] > value)
+				right = m - 1;
+			else
 				return (m);
 		}
 	return (-1);
